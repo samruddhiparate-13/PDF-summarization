@@ -1,0 +1,56 @@
+<html>
+<style>
+  input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    width: 550px; /* increase the width to 350px */
+    margin-left: 10px; /* add a left margin of 10px */
+  }
+  
+  input[type="text"]:focus {
+    border-color: blue;
+    box-shadow: 0 0 5px blue;
+  }
+  
+  .image-container {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0px;
+  }
+
+  input[type="file"] {
+    margin-left: 10px;
+  }
+
+  button[type="button"] {
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  button[type="button"]:hover {
+    background-color: blue;
+    color: white;
+  }
+
+  h1 {
+ 	font-family: Garamond, Poppins, sans-serif;
+  }
+</style>
+<body>
+<center><h1>SUMMARIZATION</h1>
+<form>
+  <label for="search"></label>
+  <div class="image-container">
+    <img style src="logo.png" alt="Enter the URL" width="27" height="27">
+  </div>
+  <input type="text" id="search" name="search" placeholder="Enter the URL...">
+  <input type="file" id="pdfUpload" name="pdfUpload" accept=".pdf" style="display: none;">
+  <button type="button" onclick="document.getElementById('pdfUpload').click();">Upload PDF</button>
+</center>
+</form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .center-box {
+            width: 700px;
+            height: 390px;
+            margin: 0 auto;
+            border: 2px solid black;
+            background-color: peachpuff; /* Pastel light color */
+            display: flex;
+            position: relative; 
+            top: 55px;
+        }
+        
+        .center-box > div{
+            width: 50%;
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .name1, .name2 {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: -39px; /* Adjust top position to place outside the top of the page */
+            border: none !important; /* Remove border */
+        }
+
+        .name1 {
+            left: 0; /* Position "Original Text" on the left side */
+        }
+
+        .name2 {
+            right: 0; /* Position "Summary" on the right side */
+        }
+
+        .generate-summary-btn {
+            position: absolute;
+            top: 500px;
+            right: 150px;
+		 border: 1px solid #ccc;
+    		 background-color: blue;
+    		 border-radius: 20px;
+		 color: white;
+    		 padding: 10px;
+    		 cursor: pointer;
+  }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="center-box">
+        <div contenteditable="true" id="left-box" placeholder="Enter text here..."></div>
+        <div id="right-box"></div>
+        <div class="name1"><b>ORIGINAL TEXT</b></div>
+        <div class="name2"><b>SUMMARY</b></div>
+    </div>
+    <button class="generate-summary-btn" onclick="generateSummary()">Generate Summary</button>
+    <script>
+        function generateSummary() {
+            var originalText = document.getElementById("left-box").innerText;
+            document.getElementById("right-box").innerText = originalText;
+        }
+    </script>
+</body>
+</html>
